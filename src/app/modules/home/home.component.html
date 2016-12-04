@@ -1,3 +1,42 @@
+<nav class="navbar navbar-light bg-faded navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button (click)="isCollapsed = !isCollapsed" class="navbar-toggler hidden-lg-up float-xs-right" type="button" aria-label="Toggle navigation"></button>
+    </div>
+    <div [ngbCollapse]="isCollapsed" class="collapse navbar-toggleable-md">
+      <ul class="nav navbar-nav float-lg-right">
+        <li class="nav-item active">
+          <a class="nav-link" href="#about">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">PORTFOLIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#pricing">PRICING</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">CONTACT</a>
+        </li>
+        <!--
+        <li class="nav-item dropdown">
+          <div ngbDropdown class="d-inline-block">
+            <a class="nav-link dropdown-toggle" id="dropdownMenu1" ngbDropdownToggle>Toggle dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <button class="dropdown-item">Action - 1</button>
+              <button class="dropdown-item">Another Action</button>
+              <button class="dropdown-item">Something else is here</button>
+            </div>
+          </div>
+        </li>
+        -->
+      </ul>
+    </div>
+  </div>
+</nav>
 <div class="jumbotron text-center">
   <h1>Company</h1> 
   <p>We specialize in blablabla</p>
@@ -10,25 +49,25 @@
     </div>
   </form>
 </div>
-<div class="container-fluid">
+<div id="about" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
       <h2>About Company Page</h2>
       <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum, libero in posuere convallis, ex tellus tristique nisl, vel maximus tellus purus in nibh. Fusce consectetur a tortor et sagittis. Etiam vitae commodo nunc, vel maximus metus. Duis aliquam at nisl a ornare. Nullam sit amet sapien eu mauris varius condimentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut id molestie ante. Ut sagittis, arcu ut iaculis facilisis, enim urna consequat</h4> 
       <p>Maecenas posuere rutrum nibh, ac porta enim maximus nec. Donec sed ornare magna. Vivamus commodo nulla ac ex consequat ullamcorper. Maecenas fermentum purus eget ipsum eleifend, ultricies cursus massa imperdiet. Nulla tortor purus, venenatis id diam eget, pellentesque semper purus. Etiam feugiat lectus pulvinar lorem congue volutpat. Duis rutrum ex id elit pulvinar lobortis.
 
-Duis dictum lorem vitae malesuada tincidunt. Phasellus cursus fringilla metus et convallis. Praesent non ex diam. Maecenas semper auctor felis ac tristique. Aliquam pretium diam justo, eget interdum diam commodo a. Proin varius congue efficitur. Pellentesque consectetur, quam sit amet mollis lacinia, magna orci maximus nisi, eu posuere ipsum mi id eros. Sed varius pellentesque felis, nec rhoncus metus porttitor sit amet.</p>
+  Duis dictum lorem vitae malesuada tincidunt. Phasellus cursus fringilla metus et convallis. Praesent non ex diam. Maecenas semper auctor felis ac tristique. Aliquam pretium diam justo, eget interdum diam commodo a. Proin varius congue efficitur. Pellentesque consectetur, quam sit amet mollis lacinia, magna orci maximus nisi, eu posuere ipsum mi id eros. Sed varius pellentesque felis, nec rhoncus metus porttitor sit amet.</p>
       <button class="btn btn-default btn-lg">Get in Touch</button>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span>
+      <i class="fa fa-signal logo" aria-hidden="true"></i>
     </div>
   </div>
 </div>
 <div class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo"></span> 
+      <i class="fa fa-globe logo" aria-hidden="true"></i> 
     </div>
     <div class="col-sm-8">
       <h2>Our Values</h2>
@@ -37,3 +76,178 @@ Duis dictum lorem vitae malesuada tincidunt. Phasellus cursus fringilla metus et
     </div>
   </div>
 </div>
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <i class="fa fa-power-off logo-small" aria-hidden="true"></i> 
+      <h4>POWER</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fa fa-heart logo-small" aria-hidden="true"></i>
+      <h4>LOVE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fa fa-suitcase logo-small" aria-hidden="true"></i>
+      <h4>JOB DONE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    </div>
+    <br><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <i class="fa fa-leaf logo-small" aria-hidden="true"></i>
+      <h4>GREEN</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fa fa-certificate logo-small" aria-hidden="true"></i>
+      <h4>CERTIFIED</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fa fa-wrench logo-small" aria-hidden="true"></i>
+      <h4>HARD WORK</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+</div>
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Portfolio</h2>
+  <h4>What we have created</h4>
+  <div class="row text-center">
+    <div class="col-sm-4" *ngFor="let city of portfolio">
+      <div class="thumbnail">
+        <img [src]="city.image" alt="Paris">
+        <p><strong>{{city.name}}</strong></p>
+        <p>{{city.description}}</p>
+      </div>
+    </div>
+  </div>
+  <h2>What our customers say</h2>
+  <ngb-carousel>
+    <template ngbSlide>
+      <img src="http://lorempixel.com/900/500?r=1" alt="Random first slide">
+      <div class="carousel-caption">
+        <h3>"This company is the best. I am so happy with the result!"</h3>
+        <p>Michael Roe, Vice President, Comment Box</p>
+      </div>
+    </template>
+    <template ngbSlide>
+      <img src="http://lorempixel.com/900/500?r=2" alt="Random second slide">
+      <div class="carousel-caption">
+        <h3>"One word... WOW!!"</h3>
+        <p>John Doe, Salesman, Rep Inc</p>
+      </div>
+    </template>
+    <template ngbSlide>
+      <img src="http://lorempixel.com/900/500?r=3" alt="Random third slide">
+      <div class="carousel-caption">
+        <h3>"Could I... BE any more happy with this company?"</h3>
+        <p>Chandler Bing, Actor, FriendsAlot</p>
+      </div>
+    </template>
+  </ngb-carousel>
+</div>
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Choose a payment plan that works for you</h4>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Basic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20</strong> Lorem</p>
+          <p><strong>15</strong> Ipsum</p>
+          <p><strong>5</strong> Dolor</p>
+          <p><strong>2</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$19</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div> 
+    </div> 
+    <div class="col-sm-4">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Pro</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>50</strong> Lorem</p>
+          <p><strong>25</strong> Ipsum</p>
+          <p><strong>10</strong> Dolor</p>
+          <p><strong>5</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$29</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div> 
+    </div> 
+   <div class="col-sm-4">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>100</strong> Lorem</p>
+          <p><strong>50</strong> Ipsum</p>
+          <p><strong>25</strong> Dolor</p>
+          <p><strong>10</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$49</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div> 
+    </div> 
+  </div>
+</div>
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><i class="fa fa-map-marker" aria-hidden="true"></i> Chicago, US</p>
+      <p><i class="fa fa-mobile" aria-hidden="true"></i> +00 1515151515</p>
+      <p><i class="fa fa-envelope" aria-hidden="true"></i> myemail@something.com</p> 
+    </div>
+    <div class="col-sm-7">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  </a>
+  <p>All rights reserved <a href="http://www.renquila.com" title="Visit Renquila">www.renquila.com</a></p> 
+</footer>
