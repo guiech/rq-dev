@@ -1,1 +1,39 @@
-<ngb-alert *ngIf="show" [type]="type" (close)="closeAlert()">This is an success alert</ngb-alert>
+<div class="jumbotron text-center">
+  <h1>Company</h1> 
+  <p>We specialize in blablabla</p>
+  <form class="form-inline">
+    <div class="input-group">
+      <input [(ngModel)]="searchForm.city" name="city" type="text" class="form-control" size="50" placeholder="Ciudad" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Buscar</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Company Page</h2>
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum, libero in posuere convallis, ex tellus tristique nisl, vel maximus tellus purus in nibh. Fusce consectetur a tortor et sagittis. Etiam vitae commodo nunc, vel maximus metus. Duis aliquam at nisl a ornare. Nullam sit amet sapien eu mauris varius condimentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut id molestie ante. Ut sagittis, arcu ut iaculis facilisis, enim urna consequat</h4> 
+      <p>Maecenas posuere rutrum nibh, ac porta enim maximus nec. Donec sed ornare magna. Vivamus commodo nulla ac ex consequat ullamcorper. Maecenas fermentum purus eget ipsum eleifend, ultricies cursus massa imperdiet. Nulla tortor purus, venenatis id diam eget, pellentesque semper purus. Etiam feugiat lectus pulvinar lorem congue volutpat. Duis rutrum ex id elit pulvinar lobortis.
+
+Duis dictum lorem vitae malesuada tincidunt. Phasellus cursus fringilla metus et convallis. Praesent non ex diam. Maecenas semper auctor felis ac tristique. Aliquam pretium diam justo, eget interdum diam commodo a. Proin varius congue efficitur. Pellentesque consectetur, quam sit amet mollis lacinia, magna orci maximus nisi, eu posuere ipsum mi id eros. Sed varius pellentesque felis, nec rhoncus metus porttitor sit amet.</p>
+      <button class="btn btn-default btn-lg">Get in Touch</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo"></span> 
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2>
+      <h4><strong>MISSION:</strong> Our mission Integer porttitor vitae ex in fringilla. In luctus ultricies arcu sit amet aliquam. Curabitur ullamcorper eros vitae nisi mollis venenatis ac vitae urna. Quisque risus nibh, tincidunt vel ligula placerat, convallis fermentum ipsum. Maecenas blandit efficitur enim in eleifend. Duis sagittis pharetra mi, a dapibus lectus elementum eu. Nulla nec lectus eu ligula venenatis molestie. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</h4> 
+      <p><strong>VISION:</strong> Our vision Phasellus vel ex in diam eleifend egestas. Nulla eget orci in turpis ullamcorper iaculis. Aliquam ac vehicula urna, ut malesuada odio. In hac habitasse platea dictumst. Nunc pharetra dui nec accumsan vehicula. Nulla venenatis sem a nisi vestibulum congue nec vitae mauris. Phasellus lacinia nulla et risus eleifend auctor. Donec nisl lacus, imperdiet mattis tempor ut, aliquam eget leo. Maecenas elit mauris, semper et leo sed, gravida mollis felis. Proin sit amet scelerisque nisi. Praesent iaculis, nibh et volutpat sagittis, neque dui tincidunt eros, id condimentum est lorem vitae massa. Ut varius bibendum ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla ac suscipit metus.</p>
+    </div>
+  </div>
+</div>

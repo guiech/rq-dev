@@ -7,16 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  type = 'success';
-  show = true;
+  searchForm = { city: '' };
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  public closeAlert() {
-    this.show = false;
   }
 
 }
