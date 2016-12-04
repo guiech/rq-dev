@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { HomeComponent } from './home.component';
 
 import { HomeRoutingModule } from './home-routing.module'
@@ -7,7 +10,8 @@ import { HomeRoutingModule } from './home-routing.module'
 @NgModule({
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    NgbModule.forRoot()
   ],
   declarations: [HomeComponent]
 })

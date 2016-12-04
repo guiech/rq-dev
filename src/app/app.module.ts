@@ -17,9 +17,11 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     PageNotFoundComponent
   ],
   imports: [
+    // angular modules
     BrowserModule,
     FormsModule,
     HttpModule,
+    // renquila modules
     HomeModule,
     AppRoutingModule
   ],
