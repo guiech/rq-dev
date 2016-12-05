@@ -1,30 +1,32 @@
-## Install angular-cli - https://cli.angular.io/
+## Install angular-cli
+[link] (https://cli.angular.io/).
+
 `> npm install -g angular-cli`
 
 ## Create project with angular-cli
-`> ng new <project-name>`
-`> cd <project-name>`
+`> ng new <project-name>`.
+`> cd <project-name>`.
 `> ng serve`
 
 ## Install bootstrap
-[link] (https://github.com/angular/angular-cli#support-for-offline-applications)
+[link] (https://github.com/angular/angular-cli#support-for-offline-applications).
 `> npm install bootstrap@next`
 
-modify angular-cli.json file:
-Then add the needed script files to apps[0].scripts:
+modify angular-cli.json file:.
+Then add the needed script files to apps[0].scripts:.
 "scripts": [
   "../node_modules/jquery/dist/jquery.js",
   "../node_modules/tether/dist/js/tether.js",
   "../node_modules/bootstrap/dist/js/bootstrap.js"
 ],
-Finally add the Bootstrap CSS to the apps[0].styles array:
+Finally add the Bootstrap CSS to the apps[0].styles array:.
 "styles": [
   "../node_modules/bootstrap/dist/css/bootstrap.css",
   "styles.css"
 ],
 
 ## Install ng-bootstrap
-[link] (https://ng-bootstrap.github.io/#/getting-started)
+[link] (https://ng-bootstrap.github.io/#/getting-started).
 `> npm install --save @ng-bootstrap/ng-bootstrap`
 
 ## Install font-awesome
