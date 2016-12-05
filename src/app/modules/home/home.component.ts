@@ -1,11 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'rq-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  host: {
+    '(window:scroll)': 'updateHeader($event)'
+  }
 })
 export class HomeComponent implements OnInit {
+
+  @ViewChild('about') about: ElementRef;
+
+  isScrolled = false;
+  currPos: Number = 0;
+  startPos: Number = 0;
+  changePos: Number = 100;
 
   searchForm = { city: '' };
 
@@ -20,6 +30,20 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    this.changePos = this.about.nativeElement.offsetTop;
+  }
+
+  updateHeader(evt) {
+    
+    this.currPos = (window.pageYOffset || evt.target.scrollTop) - (evt.target.clientTop || 0);
+    if(this.currPos >= this.changePos ) {
+      this.isScrolled = true;
+    } else {
+      this.isScrolled = false;
+    }
   }
 
 }
