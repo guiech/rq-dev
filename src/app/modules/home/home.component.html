@@ -1,42 +1,4 @@
-<nav class="navbar navbar-light bg-faded navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Renquila</a>
-      <button (click)="isCollapsed = !isCollapsed" class="navbar-toggler hidden-lg-up float-xs-right" type="button" aria-label="Toggle navigation"></button>
-    </div>
-    <div [ngbCollapse]="isCollapsed" class="collapse navbar-toggleable-md">
-      <ul class="nav navbar-nav float-lg-right">
-        <li class="nav-item" [ngClass]= "{'active': isScrolled}">
-          <a class="nav-link" href="#about">ABOUT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#services">SERVICES</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#portfolio">PORTFOLIO</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#pricing">PRICING</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">CONTACT</a>
-        </li>
-        <!--
-        <li class="nav-item dropdown">
-          <div ngbDropdown class="d-inline-block">
-            <a class="nav-link dropdown-toggle" id="dropdownMenu1" ngbDropdownToggle>Toggle dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <button class="dropdown-item">Action - 1</button>
-              <button class="dropdown-item">Another Action</button>
-              <button class="dropdown-item">Something else is here</button>
-            </div>
-          </div>
-        </li>
-        -->
-      </ul>
-    </div>
-  </div>
-</nav>
+<rq-header></rq-header>
 <div class="jumbotron text-center">
   <h1>Renquila</h1> 
   <p>We specialize in blablabla</p>
@@ -49,7 +11,7 @@
     </div>
   </form>
 </div>
-<div class="container-fluid">
+<div #section class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
       <h2>About Company Page</h2>
@@ -76,7 +38,7 @@
     </div>
   </div>
 </div>
-<div #about class="container-fluid text-center">
+<div class="container-fluid text-center">
   <h2>SERVICES</h2>
   <h4>What we offer</h4>
   <br>
@@ -116,7 +78,7 @@
     </div>
   </div>
 </div>
-<div id="portfolio" class="container-fluid text-center bg-grey">
+<div class="container-fluid text-center bg-grey">
   <h2>Portfolio</h2>
   <h4>What we have created</h4>
   <div class="row text-center">
@@ -153,7 +115,7 @@
     </template>
   </ngb-carousel>
 </div>
-<div id="pricing" class="container-fluid">
+<div class="container-fluid">
   <div class="text-center">
     <h2>Pricing</h2>
     <h4>Choose a payment plan that works for you</h4>
@@ -218,7 +180,7 @@
     </div> 
   </div>
 </div>
-<div id="contact" class="container-fluid bg-grey">
+<div class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>
   <div class="row">
     <div class="col-sm-5">

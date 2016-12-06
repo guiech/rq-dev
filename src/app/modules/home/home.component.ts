@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChildren, ElementRef, AfterViewInit, QueryList } from '@angular/core';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'rq-home',
@@ -10,13 +11,11 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angula
 })
 export class HomeComponent implements OnInit {
 
-  @ViewChild('about') about: ElementRef;
-
-  isScrolled = false;
+  @ViewChildren('section') sections: QueryList<ElementRef>;
+  offsets:number[] = [];
+  currentActive = 0;
   currPos: Number = 0;
-  startPos: Number = 0;
-  changePos: Number = 100;
-
+  
   searchForm = { city: '' };
 
   portfolio = [
@@ -33,17 +32,20 @@ export class HomeComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.changePos = this.about.nativeElement.offsetTop;
+    this.sections.forEach(
+      section => { this.offsets.push(section.nativeElement.offsetTop); }
+    );
   }
 
   updateHeader(evt) {
-    
     this.currPos = (window.pageYOffset || evt.target.scrollTop) - (evt.target.clientTop || 0);
-    if(this.currPos >= this.changePos ) {
-      this.isScrolled = true;
-    } else {
-      this.isScrolled = false;
-    }
+    this.offsets.forEach(
+      offset => {
+        if( this.currPos > offset ) {
+          this.currentActive = this.offsets.indexOf(offset) + 1;
+        }
+      }
+    );
   }
 
 }
