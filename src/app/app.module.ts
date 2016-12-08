@@ -8,7 +8,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HomeModule } from './modules/home/home.module';
+import { FinderModule } from './modules/finder/finder.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
+import { PropertiesService } from './services/properties.service'
 
 
 @NgModule({
@@ -23,9 +26,10 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     HttpModule,
     // renquila modules
     HomeModule,
+    FinderModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PropertiesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
