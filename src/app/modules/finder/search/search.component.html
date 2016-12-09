@@ -1,4 +1,185 @@
-<p>
-  search works!
-  {{city | json}}
-</p>
+<div class="container-fluid">
+  <div class="col-sm-5" id="search-left">
+    <div class="bg-primary" id="un4to-map"></div>
+  </div>
+  <div class="col-sm-7" id="search-right">
+    <hr class="visible-xs">
+    <form class="form" method="post">
+      <div class="row">
+        <div class="form-horizontal col-sm-2">
+          <label class="control-label block">Filtros</label>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <select class="form-control" name="search_type" id="search_type">
+              <option value="0">Tipo de propiedad</option>
+              <option value="1">Casa</option>
+              <option value="2">Departamento</option>
+            </select>
+          </div>
+        </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <select class="form-control" name="search_rooms" id="search_bathrooms">
+                <option value="0">Baños</option>
+                <option value="1">1 Baño</option>
+                <option value="2">2 Baños</option>
+                <option value="3">3 Baños</option>
+                <option value="4">4 Baños</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <select class="form-control" name="search_rooms" id="search_rooms">
+                <option value="0">Habitaciones</option>
+                <option value="1">1 Habitacion</option>
+                <option value="2">1 Habitaciones</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-horizontal col-sm-2">
+            <label class="control-label block">Rango de precios</label>
+          </div>
+          <div class="col-sm-10">
+            <input id="search_price" name="search_price" data-min="0" data-max="10000" data-type="double" data-prefix="$" data-grid="true" data-grid-num="10">
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="form-horizontal col-sm-2">
+            <button class="btn btn-default" type="button" (click)="isFilterCollapsed = !isFilterCollapsed">
+              Mas filtros
+            </button>
+          </div>
+          <div class="results col-sm-10">
+            Mostrando <span class="show-count">x</span> de <span class="count">y</span>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div [ngbCollapse]="isFilterCollapsed" class="collapse" id="moreFilters">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="ac" id="ac"> Aire Acondicionado
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="heat" id="heat"> Calefaccion
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="kitchen" id="kitchen"> Cocina
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="yard" id="yard"> Patio
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="garage" id="garage"> Garage
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="pool" id="pool"> Pileta
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="grill" id="grill"> Parrilla
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="grill_shed" id="grill_shed"> Quincho
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="gated_community" id="gated_community"> Barrio Cerrado
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="alarm" id="alarm"> Alarma
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="warranty" id="warranty"> Garantia
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="real_state" id="real_state"> Inmobiliaria
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="furniture" id="furniture"> Muebles
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-horizontal col-sm-2">
+                <a class="btn btn-default" type="button">
+                    Aplicar
+                </a>
+              </div>
+            </div>
+            <hr>
+          </div>            
+        </div>
+    </form>
+    <div class="row properties">
+      <rq-property></rq-property>
+      <rq-property></rq-property>
+      <rq-property></rq-property>
+      <rq-property></rq-property>
+      <rq-property></rq-property>
+    </div>
+    <div class="row pagination-row">
+      <ngb-pagination [collectionSize]="120" [(page)]="page" [maxSize]="5" [boundaryLinks]="true"></ngb-pagination>
+    </div>
+  </div>
+</div>

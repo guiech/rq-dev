@@ -1,0 +1,53 @@
+.search-prop {
+    position: relative;
+    margin-bottom: 25px;
+}
+.search-prop-avatar {
+    border: 1px solid white;
+    border-radius: 30px;
+    overflow: hidden;
+    position: absolute;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.search-prop .search-prop-avatar {
+    right: 3px;
+    top: 2px;
+    height: 60px;
+    width: 60px;
+}
+.search-prop .carousel.slide .gallery-item {
+    background-color: transparent;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+}
+.search-prop .carousel.slide, .search-prop .carousel.slide .gallery-item {
+    height: 300px;
+}
+.search-prop .search-prop-price {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 20px;
+    padding: 4px 22px;
+    position: absolute;
+    bottom: 87px;
+}
+.search-prop .carousel.slide .gallery-item img {
+    display: none;
+}
+.search-prop .carousel.slide .gallery-item.no-gallery {
+    background-color: #00a65a;
+    background-position: 50% 45%;
+    background-size: contain;
+}
+.search-prop .search-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 18px;
+    margin: 10px 0px;
+}

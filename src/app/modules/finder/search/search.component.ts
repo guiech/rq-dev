@@ -13,6 +13,10 @@ export class SearchComponent implements OnInit {
 
   city: Property;
 
+  isFilterCollapsed: boolean = true;
+
+  page: number = 1;
+
   constructor(
     private route: ActivatedRoute,
     private propService: PropertiesService

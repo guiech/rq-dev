@@ -1,17 +1,33 @@
+@font-face{
+    font-family:"glacial-bold";src:url("./assets/fonts/GlacialIndifference-Bold.otf");font-weight:normal;font-style:normal
+}
+@font-face{
+    font-family:"glacial";src:url("./assets/fonts/GlacialIndifference-Regular.otf");font-weight:normal;font-style:normal
+}
+
+body{
+    font-family: 'glacial';
+    background-color: white;
+}
 .carousel-control.right, .carousel-control.left {
     background-image: none;
-    color: #f4511e !important;
+    color: #ffffff !important;
 }
+/*
 .carousel-indicators li {
     border-color: #f4511e;
 }
 .carousel-indicators li.active {
     background-color: #f4511e;
 }
+*/
 .carousel-caption {
     position: static;
     min-height: 150px;
 }
 img ~ .carousel-caption {
     position: absolute;
+}
+.guilleaiquel {
+    color: red;
 }
