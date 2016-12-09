@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   userImg = "";
   adminLink = "/admin";
   isCollapsed = true;
-  userImage = this.BASE_URL + "/assets/images/avatar_03.png";
+  userImage = "assets/images/avatar_03.png";
 
   constructor() { }
 
