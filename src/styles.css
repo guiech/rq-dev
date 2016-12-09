@@ -28,6 +28,6 @@ body{
 img ~ .carousel-caption {
     position: absolute;
 }
-.guilleaiquel {
-    color: red;
+#rq-search-map .sebm-google-map-container-inner {
+    width: 100% !important;
 }

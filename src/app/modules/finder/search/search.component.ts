@@ -7,7 +7,10 @@ import { Property } from 'app/models/property';
 @Component({
   selector: 'rq-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.css'],
+  host: {
+    '(window:resize)': 'updateMapSize($event)'
+  }
 })
 export class SearchComponent implements OnInit {
 
@@ -22,6 +25,11 @@ export class SearchComponent implements OnInit {
     private propService: PropertiesService
   ) { }
 
+  lat: number = 51.678418;
+  lng: number = 7.809007;
+  mapHeight: string = '600px';
+  headerHeight: number = 50;
+
   ngOnInit() {
     /*
     I can't make this work
@@ -32,7 +40,15 @@ export class SearchComponent implements OnInit {
     */
     this.route.params
       .subscribe((param:any) => this.city = this.propService.getPropertiesByCity(param.name));
-    console.log(this.city);
+    
+    this.mapHeight = (window.innerHeight - this.headerHeight) + 'px';
   }
+
+  updateMapSize(event) {
+    let height = +event.target.innerHeight - this.headerHeight;
+    this.mapHeight = height + 'px';
+  }
+
+
 
 }

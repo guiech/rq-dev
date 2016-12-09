@@ -1,0 +1,22 @@
+#rq-search-map .sebm-google-map-container {
+    height: inherit;
+    position: fixed;
+    top: 50px;
+    left: 15px;
+    width: 40.66666%;
+}
+#search-right {
+    height: 100%;
+}
+#search-left {
+    height: 100%;
+}
+.container-fluid {
+    position: relative;
+    top: 50px;
+}
+@media (max-width: 575px) {
+    #rq-search-map, #rq-search-map .sebm-google-map-container {
+        display: none;
+    }
+}

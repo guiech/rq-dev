@@ -6,6 +6,7 @@ import { FinderRoutingModule } from './finder-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PropertyComponent } from './search/property/property.component';
+import { AgmCoreModule } from 'angular2-google-maps/core';
 
 @NgModule({
   imports: [
@@ -14,7 +15,10 @@ import { PropertyComponent } from './search/property/property.component';
     // routing module
     FinderRoutingModule,
     // thirthy party modules
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyABZMkbRqSTpzD2c1DSYRO0i670tP7ODkk'
+    })
   ],
   declarations: [FinderComponent, SearchComponent, HeaderComponent, PropertyComponent]
 })
