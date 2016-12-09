@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
 
   BASE_URL = "http://localhost:4200";
   isLogin = true;
-  userName = "Guillermo";
+  userName = "Usuario";
   userImg = "";
   adminLink = "/admin";
   isCollapsed = true;
