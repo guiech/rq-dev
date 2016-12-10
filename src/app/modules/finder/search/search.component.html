@@ -1,10 +1,15 @@
 <div class="container-fluid">
   <div class="col-sm-5" id="search-left">
     <div class="bg-primary" id="rq-search-map" [style.height]="mapHeight">
-      <sebm-google-map [latitude]="lat" [longitude]="lng">
-        <sebm-google-map-marker #map [latitude]="lat" [longitude]="lng" [iconUrl]="'./icon.png'">
+      <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+        <sebm-google-map-marker 
+              *ngFor="let prop of properties" 
+              [latitude]="prop.lat" 
+              [longitude]="prop.lng" 
+              [iconUrl]="'./icon.png'" 
+              (markerClick)="closeMarkerWindows()">
           <sebm-google-map-info-window>
-            <rq-property></rq-property>
+            <rq-property [data]="prop"></rq-property>
           </sebm-google-map-info-window>
         </sebm-google-map-marker>
       </sebm-google-map>
@@ -180,11 +185,7 @@
         </div>
     </form>
     <div class="row properties">
-      <rq-property></rq-property>
-      <rq-property></rq-property>
-      <rq-property></rq-property>
-      <rq-property></rq-property>
-      <rq-property></rq-property>
+      <rq-property *ngFor="let prop of properties" [data]="prop"></rq-property>
     </div>
     <div class="row pagination-row">
       <ngb-pagination [collectionSize]="120" [(page)]="page" [maxSize]="5" [boundaryLinks]="true"></ngb-pagination>

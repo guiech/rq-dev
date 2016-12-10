@@ -1,8 +1,9 @@
 import 'rxjs/add/operator/switchMap';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { PropertiesService } from 'app/services/properties.service';
 import { Property } from 'app/models/property';
+import { SebmGoogleMapInfoWindow } from 'angular2-google-maps/core';
 
 @Component({
   selector: 'rq-search',
@@ -14,21 +15,28 @@ import { Property } from 'app/models/property';
 })
 export class SearchComponent implements OnInit {
 
-  city: Property;
+  searchResult: any;
+  properties: Property[];
+
+  bfalse:boolean = false;
+  btrue:boolean = true;
 
   isFilterCollapsed: boolean = true;
 
   page: number = 1;
 
+  lat: number;
+  lng: number;
+  zoom: number = 14;
+  mapHeight: string = '600px';
+  headerHeight: number = 50;
+
+  @ViewChildren(SebmGoogleMapInfoWindow) markersWindows:QueryList<SebmGoogleMapInfoWindow>; 
+
   constructor(
     private route: ActivatedRoute,
     private propService: PropertiesService
   ) { }
-
-  lat: number = 51.678418;
-  lng: number = 7.809007;
-  mapHeight: string = '600px';
-  headerHeight: number = 50;
 
   ngOnInit() {
     /*
@@ -39,7 +47,12 @@ export class SearchComponent implements OnInit {
     .subscribe(hero => this.hero = hero);
     */
     this.route.params
-      .subscribe((param:any) => this.city = this.propService.getPropertiesByCity(param.name));
+      .subscribe((param:any) => this.searchResult = this.propService.getPropertiesByCity(param.name));
+
+    this.lat = this.searchResult.city.lat;
+    this.lng = this.searchResult.city.lng;
+
+    this.properties = this.searchResult.data;
     
     this.mapHeight = (window.innerHeight - this.headerHeight) + 'px';
   }
@@ -47,6 +60,10 @@ export class SearchComponent implements OnInit {
   updateMapSize(event) {
     let height = +event.target.innerHeight - this.headerHeight;
     this.mapHeight = height + 'px';
+  }
+
+  closeMarkerWindows() {
+    this.markersWindows.forEach((window:SebmGoogleMapInfoWindow) => window.close());
   }
 
 
