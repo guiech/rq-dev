@@ -2,7 +2,11 @@
   <div class="col-sm-5" id="search-left">
     <div class="bg-primary" id="rq-search-map" [style.height]="mapHeight">
       <sebm-google-map [latitude]="lat" [longitude]="lng">
-        <sebm-google-map-marker #map [latitude]="lat" [longitude]="lng" [style.background-color]="'red'"></sebm-google-map-marker>
+        <sebm-google-map-marker #map [latitude]="lat" [longitude]="lng" [iconUrl]="'./icon.png'">
+          <sebm-google-map-info-window>
+            <rq-property></rq-property>
+          </sebm-google-map-info-window>
+        </sebm-google-map-marker>
       </sebm-google-map>
     </div>
   </div>
