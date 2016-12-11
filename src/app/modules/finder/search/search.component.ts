@@ -17,6 +17,7 @@ export class SearchComponent implements OnInit {
 
   searchResult: any;
   properties: Property[];
+  pageProps: Property[];
 
   bfalse:boolean = false;
   btrue:boolean = true;
@@ -24,12 +25,17 @@ export class SearchComponent implements OnInit {
   isFilterCollapsed: boolean = true;
 
   page: number = 1;
+  indexStart: number = 0;
 
   lat: number;
   lng: number;
   zoom: number = 14;
   mapHeight: string = '600px';
   headerHeight: number = 50;
+
+  itemsPerPage = 10;
+
+  mapIcon = './assets/images/system/map-marker.png';
 
   @ViewChildren(SebmGoogleMapInfoWindow) markersWindows:QueryList<SebmGoogleMapInfoWindow>; 
 
@@ -64,8 +70,16 @@ export class SearchComponent implements OnInit {
 
   closeMarkerWindows() {
     this.markersWindows.forEach((window:SebmGoogleMapInfoWindow) => window.close());
+    this.mapIcon = './assets/images/system/map-marker-grey.png';
   }
 
+  showPagination() {
+    return this.properties.length > this.itemsPerPage;
+  }
 
+  changePage(page) {
+    this.page = page;
+    this.indexStart = (this.page - 1) * this.itemsPerPage;
+  }
 
 }

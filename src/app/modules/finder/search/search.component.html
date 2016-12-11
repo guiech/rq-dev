@@ -3,10 +3,10 @@
     <div class="bg-primary" id="rq-search-map" [style.height]="mapHeight">
       <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
         <sebm-google-map-marker 
-              *ngFor="let prop of properties" 
+              *ngFor="let prop of properties | slice:indexStart:indexStart+itemsPerPage" 
               [latitude]="prop.lat" 
               [longitude]="prop.lng" 
-              [iconUrl]="'./icon.png'" 
+              [iconUrl]="mapIcon" 
               (markerClick)="closeMarkerWindows()">
           <sebm-google-map-info-window>
             <rq-property [data]="prop"></rq-property>
@@ -185,10 +185,12 @@
         </div>
     </form>
     <div class="row properties">
-      <rq-property *ngFor="let prop of properties" [data]="prop"></rq-property>
+      <rq-property *ngFor="let prop of properties | slice:indexStart:indexStart+itemsPerPage" [data]="prop"></rq-property>
     </div>
-    <div class="row pagination-row">
-      <ngb-pagination [collectionSize]="120" [(page)]="page" [maxSize]="5" [boundaryLinks]="true"></ngb-pagination>
+    <div class="row pagination-row" *ngIf="showPagination()">
+      <div class="col-sm-12">
+        <ngb-pagination (pageChange)="changePage($event)" [pageSize]="itemsPerPage" [collectionSize]="properties.length" [(page)]="page" [maxSize]="5" [boundaryLinks]="true"></ngb-pagination>
+      </div>
     </div>
   </div>
 </div>
