@@ -17,7 +17,6 @@ export class SearchComponent implements OnInit {
 
   searchResult: any;
   properties: Property[];
-  pageProps: Property[];
 
   bfalse:boolean = false;
   btrue:boolean = true;
@@ -70,7 +69,6 @@ export class SearchComponent implements OnInit {
 
   closeMarkerWindows() {
     this.markersWindows.forEach((window:SebmGoogleMapInfoWindow) => window.close());
-    this.mapIcon = './assets/images/system/map-marker-grey.png';
   }
 
   showPagination() {
