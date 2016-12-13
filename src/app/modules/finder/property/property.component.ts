@@ -22,7 +22,6 @@ export class PropertyComponent implements OnInit {
   ngOnInit() {
     this.route.params
       .subscribe((param:any) => this.property = this.propService.getPropertyById(+param.id));
-    console.log(this.property);
   }
 
 }
