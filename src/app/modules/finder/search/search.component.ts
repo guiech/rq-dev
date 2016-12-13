@@ -3,6 +3,7 @@ import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { PropertiesService } from 'app/services/properties.service';
 import { Property } from 'app/models/property';
+import { AgmCoreModule } from 'angular2-google-maps/core';
 import { SebmGoogleMapInfoWindow } from 'angular2-google-maps/core';
 
 @Component({
