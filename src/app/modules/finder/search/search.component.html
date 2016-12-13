@@ -9,7 +9,7 @@
               [iconUrl]="mapIcon" 
               (markerClick)="closeMarkerWindows()">
           <sebm-google-map-info-window>
-            <rq-property [data]="prop"></rq-property>
+            <rq-property-item [data]="prop"></rq-property-item>
           </sebm-google-map-info-window>
         </sebm-google-map-marker>
       </sebm-google-map>
@@ -185,7 +185,7 @@
         </div>
     </form>
     <div class="row properties">
-      <rq-property *ngFor="let prop of properties | slice:indexStart:indexStart+itemsPerPage" [data]="prop"></rq-property>
+      <rq-property-item *ngFor="let prop of properties | slice:indexStart:indexStart+itemsPerPage" [data]="prop"></rq-property-item>
     </div>
     <div class="row pagination-row" *ngIf="showPagination()">
       <div class="col-sm-12">

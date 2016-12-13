@@ -10,4 +10,10 @@ export class Property {
     images: string[];
     lat: number;
     lng: number;
+    city?:string;
+    state?:string;
+    acommodationType?:string;
+    bedRooms?:number;
+    bathRooms?:number;
+    realState?:boolean;
 }

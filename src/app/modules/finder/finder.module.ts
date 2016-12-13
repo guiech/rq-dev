@@ -5,8 +5,9 @@ import { SearchComponent } from './search/search.component';
 import { FinderRoutingModule } from './finder-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { PropertyComponent } from './search/property/property.component';
+import { PropertyItemComponent } from './search/property-item/property-item.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import { PropertyComponent } from './property/property.component';
 
 @NgModule({
   imports: [
@@ -20,6 +21,6 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
       apiKey: 'AIzaSyABZMkbRqSTpzD2c1DSYRO0i670tP7ODkk'
     })
   ],
-  declarations: [FinderComponent, SearchComponent, HeaderComponent, PropertyComponent]
+  declarations: [FinderComponent, SearchComponent, HeaderComponent, PropertyItemComponent, PropertyComponent]
 })
 export class FinderModule { }

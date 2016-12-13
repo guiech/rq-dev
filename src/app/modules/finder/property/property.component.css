@@ -1,0 +1,121 @@
+.container-fluid {
+    position: relative;
+    top: 50px;
+}
+.property-avatar {
+    background: transparent repeat scroll 50% 50% / cover;
+    height: 450px;
+}
+.property-avatar img {
+    display: none;
+}
+.property-header {
+    padding: 15px 0;
+}
+.property-header .property-owner {
+    text-align: center;
+}
+.property-header .property-owner-avatar {
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid white;
+    border-radius: 40px;
+    display: inline-block;
+    height: 80px;
+    overflow: hidden;
+    width: 80px;
+}
+.property-header .property-title h1 {
+    font-size: 30px;
+    margin-top: 6px;
+}
+.property-icon {
+    display: inline-block;
+    height: 70px;
+    padding: 0px;
+    text-align: center;
+    color: #919598;
+}
+.text-truncate {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.property-header .property-owner-avatar img {
+    display: none;
+}
+.property-header .property-icons .property-icon .icon {
+    margin: 0px;
+}
+.property-header .property-icons .property-icon .icon .icon-text {
+    display: block;
+    text-transform: lowercase;
+}
+.phone-number {
+    padding: 0px;
+    margin: 0px;
+    vertical-align: baseline;
+    color: #337ab7 !important;
+}
+.property-contact {
+    height: 300px;
+    top: -56px;
+    width: 100%;
+}
+.property-contact .row {
+    margin: 0px;
+}
+.property-contact .property-price {
+    height: 41px;
+    background-color: rgba(37,77,66,0.8);
+    color: #B4D7CB;
+    display: table;
+}
+.property-contact .property-price .price {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    font-size: 24px;
+}
+.property-contact .property-price .lapse-time {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    text-transform: capitalize;
+}
+.property-contact .property-contact-info {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #F0F0F0;
+    height: 259px;
+    background-color: white;
+}
+.property-contact .row {
+    margin: 0px;
+}
+.property-contact .property-contact-info .col-sm-12 {
+    margin-top: 10px;
+}
+.property-contact .property-contact-info .btn-default {
+    border-radius: 0px;
+    background-color: #00DDAA;
+    background-image: linear-gradient(#00DDAA 0px, #00DDAA 100%);
+    border-bottom-color: #42C695;
+    box-shadow: rgba(0, 221, 170, 1) 0px 0px 0px 0px inset, rgba(0, 221, 170, 1) 0px 0px 0px 0px;
+    border-left-color: #30E2B7;
+    border-right-color: #C5F5EB;
+    border-top-color: #3DE4BB;
+    color: #F5FBF7;
+    text-shadow: inherit;
+}
+.property-contact .property-price .h5 {
+    font-size: 14px;
+    top: -.4em;
+}
+@media (min-width: 768px) {
+    .property-contact {
+        position: absolute;
+    }
+}

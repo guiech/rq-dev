@@ -5,4 +5,5 @@ export class User {
     firstname: string;
     lastname: string;
     companyId?: number;
+    phone?:string;
 }

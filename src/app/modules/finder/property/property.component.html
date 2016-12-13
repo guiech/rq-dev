@@ -1,0 +1,88 @@
+<div class="container-fluid">
+  <div *ngIf="property.images !== undefinde && property.images.length > 0" class="row property-avatar" [ngStyle]="{'background-image': 'url(' + property.images[0] + ')'}">
+      <img [src]="property.images[0]" alt="">
+  </div>
+  <div class="row property-header">
+    <div class="container">
+      <div class="col-sm-8">
+        <div class="property-owner col-sm-2">
+          <a class="property-owner-avatar" href="#" [ngStyle]="{'background-image': 'url(' + property.user.picture + ')'}">
+            <!-- used only for SEO bots -->
+            <img [src]="property.user.picture" alt="">
+          </a>
+          <p>{{property.user.firstname}}</p>
+        </div>
+        <div class="col-sm-10">
+            <div class="property-title">
+                <h1>{{property.title}}</h1>
+                <p>{{property.city}}, {{property.state}}</p>
+            </div>
+            <div class="property-icons clearfix">
+                <div class="col-sm-3 property-icon text-truncate">
+                    <div class="row icon">
+                        <span class="fa fa-home fa-3x" aria-hidden="true"></span>
+                        <span class="icon-text">{{property.acommodationType}}</span>
+                    </div>
+                </div>
+                <div class="col-sm-3 property-icon text-truncate">
+                    <div class="row icon">
+                        <span class="fa fa-bed fa-3x" aria-hidden="true"></span>
+                        <span class="icon-text">{{property.bedRooms}} {{property.bedRooms === 1 ? 'Dormitorio' : 'Dormitorios'}} </span>
+                    </div>
+                </div>
+                <div class="col-sm-3 property-icon text-truncate">
+                    <div class="row icon">
+                        <span class="fa fa-bath fa-3x" aria-hidden="true"></span>
+                        <span class="icon-text">{{property.bathRooms}} {{property.bathRooms === 1 ? 'Baño' : 'Baños'}}</span>
+                    </div>
+                </div>
+                <div class="col-sm-3 property-icon text-truncate">
+                    <div *ngIf="property.realState" class="row icon">
+                        <span class="fa fa-building fa-3x" aria-hidden="true"></span>
+                        <span class="icon-text">Inmobiliaria</span>
+                    </div>
+                    <div *ngIf="!property.realState" class="row icon">
+                        <span class="fa fa-building fa-3x" aria-hidden="true"></span>
+                        <span class="icon-text">Dueño</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="property-contact clearfix">
+          <div class="row">
+            <div class="col-sm-12 property-price">
+              <span class="price"><sup class="h5">$ </sup>{{property.price}} <sup class="h5">{{property.currency}}</sup></span>
+              <span class="lapse-time">por mes</span>
+            </div>
+          </div>
+          <div class="row property-contact-info">
+            <div class="col-sm-12 phone">
+              <div>Contacto: <a *ngIf="!showNumber" class="btn phone-number" (click)="showNumber = true">Ver info</a><span *ngIf="showNumber">{{property.user.phone}}</span></div>
+            </div>
+            <div class="col-sm-12 text-input">
+              <textarea class="form-control" rows="3" cols="25"></textarea>
+            </div>
+            <div class="col-sm-12 button">
+              <button type="button" class="btn btn-default btn-lg btn-block" disabled="">Envia un mensaje</button>
+            </div>
+            <div class="col-sm-12 share">
+              <span>Compartir:</span>
+              <a href="https://plus.google.com/share?url=http://localhost/renquila/p/1001/casa-centrica-con-pileta" target="_blank">
+                <span class="fa fa-google-plus"></span>
+              </a>
+              <a href="https://twitter.com/intent/tweet?source=tweetbutton&amp;text=Me+Gusta+%22Casa+centrica+con+pileta+en+Villa+Carlos+Paz+%24+4800+-++Renquila%22&amp;url=http://localhost/renquila/p/1001/casa-centrica-con-pileta&amp;related=renquila" target="_blank">
+                <span class="fa fa-twitter"></span>
+              </a>
+              <a href="http://www.facebook.com/sharer.php?u=http://localhost/renquila/p/1001/casa-centrica-con-pileta" target="_blank">
+                <span class="fa fa-facebook"></span>
+              </a>
+            </div>
+            <div class="col-sm-12 message-status"><p></p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

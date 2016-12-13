@@ -3,13 +3,13 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Property } from 'app/models/Property';
 
 @Component({
-  selector: 'rq-property',
-  templateUrl: './property.component.html',
-  styleUrls: ['./property.component.css'],
+  selector: 'rq-property-item',
+  templateUrl: './property-item.component.html',
+  styleUrls: ['./property-item.component.css'],
   providers: [NgbCarouselConfig],
   encapsulation: ViewEncapsulation.None
 })
-export class PropertyComponent implements OnInit {
+export class PropertyItemComponent implements OnInit {
 
   @Input() data:Property;
 
