@@ -168,6 +168,9 @@
 .property-contact.no-picture {
     top: 0px;
 }
+.property-info .property-info-gallery {
+    margin-bottom: 12px;
+}
 @media (min-width: 768px) {
     .property-contact {
         position: absolute;

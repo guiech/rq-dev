@@ -11,7 +11,7 @@ import { HomeModule } from './modules/home/home.module';
 import { FinderModule } from './modules/finder/finder.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
-import { PropertiesService } from './services/properties.service'
+import { PropertiesService } from './services/properties.service';
 
 
 @NgModule({

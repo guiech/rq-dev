@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PropertyItemComponent } from './search/property-item/property-item.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { PropertyComponent } from './property/property.component';
+import { ImageGalleryComponent } from 'app/components/image-gallery/image-gallery.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,6 @@ import { PropertyComponent } from './property/property.component';
       apiKey: 'AIzaSyABZMkbRqSTpzD2c1DSYRO0i670tP7ODkk'
     })
   ],
-  declarations: [FinderComponent, SearchComponent, HeaderComponent, PropertyItemComponent, PropertyComponent]
+  declarations: [FinderComponent, SearchComponent, HeaderComponent, PropertyItemComponent, PropertyComponent, ImageGalleryComponent]
 })
 export class FinderModule { }

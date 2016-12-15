@@ -27,3 +27,6 @@ img ~ .carousel-caption {
 .carousel.slide.no-controls .carousel-control {
     display: none;
 }
+.property-info-gallery .carousel-item {
+    height: 500px;
+}
