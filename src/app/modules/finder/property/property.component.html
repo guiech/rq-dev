@@ -50,7 +50,7 @@
         </div>
       </div>
       <div class="col-sm-4">
-        <div class="property-contact clearfix">
+        <div class="property-contact clearfix" [ngClass]="{'no-picture':property.images.length == 0}">
           <div class="row">
             <div class="col-sm-12 property-price">
               <span class="price"><sup class="h5">$ </sup>{{property.price}} <sup class="h5">{{property.currency}}</sup></span>
@@ -85,4 +85,94 @@
       </div>
     </div>
   </div>
+  <div class="row property-info">
+        <div class="container">
+            <div class="col-sm-8">
+                <div class="property-info-data">
+                    <h3>Información sobre este anuncio</h3>
+                    <div class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac mattis nisl. Sed ut dignissim orci, eget consequat est. Sed in dapibus lorem. Nam odio purus, fringilla vel dignissim sit amet, vehicula vel ligula. Suspendisse quis elit vulputate, tristique sapien eu, finibus dolor. Pellentesque mattis diam vitae euismod vulputate. In nec semper ligula. Duis est justo, tempor nec nulla at, interdum mollis velit. Duis velit metus, pulvinar et leo vel, finibus vulputate sem. Donec vitae nunc fringilla, tincidunt arcu id, aliquet diam. Nulla vitae hendrerit sem. Phasellus at sodales tellus. Fusce pharetra facilisis justo, tincidunt blandit tortor ornare eu. Pellentesque quis mi purus. Vivamus eu urna sit amet diam sagittis sollicitudin sed eget dui.  
+                    </div>
+                </div>
+                <div class="property-info-title clearfix">
+                    <p><b>Detalles de la propiedad</b></p>
+                </div>
+                <div class="property-info-attributes clearfix">
+                    <div class="col-sm-2">
+                        El Lugar                    </div>
+                    <div class="col-sm-5">
+                        Tipo de propiedad: <b>Casa</b><br>
+                        Habitaciones: <b>2</b><br>
+                        Baños: <b>2</b><br>
+                        Cocina: <b>No</b><br>
+                        Patio: <b>No</b><br>
+                    </div>
+                    <div class="col-sm-5">
+                        Garage: <b>No</b><br>
+                        Pileta: <b>No</b><br>
+                        Parrilla: <b>No</b><br>
+                        Quincho: <b>No</b><br>
+                        Muebles: <b>No</b><br>
+                    </div>
+                </div>
+                <div class="property-info-attributes clearfix">
+                    <div class="col-sm-2">
+                        Servicios                    </div>
+                    <div class="col-sm-5">
+                        Aire Acondicionado: <b>No</b><br>
+                        Calefacción: <b>No</b><br>
+                        Alarma: <b>No</b>
+                    </div>
+                    <div class="col-sm-5">
+                        Barrio Privado: <b>No</b><br>
+                        Garantía: <b>No</b><br>
+                        Inmobiliaria: <b>No</b>
+                    </div>
+                </div>
+                <div class="property-info-attributes clearfix">
+                    <div class="col-sm-2">
+                        Normas                    </div>
+                    <div class="col-sm-10">
+                        No parties, no smoking
+                    </div>
+                </div>
+                            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+    <div class="row property-map">
+      <sebm-google-map 
+            [latitude]="property.lat" 
+            [longitude]="property.lng" 
+            [zoom]="zoom" 
+            [scrollwheel]="fal"
+            [mapDraggable]="fal"
+            [disableDoubleClickZoom]="tru"
+            [disableDefaultUI]="tru"
+            [zoomControl]="fal"
+            [streetViewControl]="fal"
+            >
+        <sebm-google-map-marker 
+              [latitude]="property.lat" 
+              [longitude]="property.lng" 
+              [iconUrl]="mapIcon" >
+        </sebm-google-map-marker>
+      </sebm-google-map>
+    </div>
+    <div class="row property-relatedoptions" *ngIf="propertiesRelated && propertiesRelated.length > 0">
+      <div class="container">
+        <div class="row section-title">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10">Anuncios similares</div>
+          <div class="col-sm-1"></div>
+        </div>
+        <div class="row section-properties">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10">
+            <div class="col-sm-4" *ngFor="let prop of propertiesRelated" ><rq-property-item [data]="prop"></rq-property-item></div>
+          </div>
+          <div class="col-sm-1"></div>
+        </div>
+      </div>
+    </div>
 </div>

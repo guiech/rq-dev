@@ -1,23 +1,21 @@
-<div class="col-sm-6">
-  <div class="search-prop">
-    <ngb-carousel [ngClass]="{'no-controls':data.images.length < 2}">
-      <template ngbSlide *ngFor="let img of data.images">
-        <a class="item gallery-item active" [routerLink]="['/p/' + data.id ]" [ngStyle]="{'background-image': 'url(' + img + ')'}">
-          <img [src]="img" alt="photo">
-        </a>
-      </template>
-      <template ngbSlide *ngIf="data.images.length === 0">
-        <a class="item gallery-item active no-gallery" [routerLink]="['/p/' + data.id ]" [ngStyle]="{'background-image': 'url(assets/images/system/logo-square.png)'}"></a>
-      </template>
-    </ngb-carousel>
-    <div class="search-prop-price"><sup>$ </sup>{{data.price}}<sup> {{data.currency}}</sup></div>
-    <a class="search-prop-avatar" href="#" [ngStyle]="{'background-image': 'url(' + data.user.picture + ')'}">
-      <!-- used only for SEO bots -->
-      <img [src]="data.user.picture" alt="">
-    </a>
-    <a [routerLink]="['/p/' + data.id ]">
-      <h4 class="search-title">{{data.title}}</h4>
-      <p>{{data.description}}</p>
-    </a>
-  </div>
+<div class="search-prop">
+  <ngb-carousel [ngClass]="{'no-controls':data.images.length < 2}">
+    <template ngbSlide *ngFor="let img of data.images">
+      <a class="item gallery-item active" [routerLink]="['/p/' + data.id ]" [ngStyle]="{'background-image': 'url(' + img + ')'}">
+        <img [src]="img" alt="photo">
+      </a>
+    </template>
+    <template ngbSlide *ngIf="data.images.length === 0">
+      <a class="item gallery-item active no-gallery" [routerLink]="['/p/' + data.id ]" [ngStyle]="{'background-image': 'url(assets/images/system/logo-square.png)'}"></a>
+    </template>
+  </ngb-carousel>
+  <div class="search-prop-price"><sup>$ </sup>{{data.price}}<sup> {{data.currency}}</sup></div>
+  <a class="search-prop-avatar" href="#" [ngStyle]="{'background-image': 'url(' + data.user.picture + ')'}">
+    <!-- used only for SEO bots -->
+    <img [src]="data.user.picture" alt="">
+  </a>
+  <a [routerLink]="['/p/' + data.id ]">
+    <h4 class="search-title">{{data.title}}</h4>
+    <p>{{data.description}}</p>
+  </a>
 </div>

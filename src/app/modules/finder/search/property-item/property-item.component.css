@@ -51,6 +51,7 @@
     font-size: 18px;
     margin: 10px 0px;
 }
+/* Google Map styles */
 .sebm-google-map-info-window-content .search-prop .carousel.slide,
 .sebm-google-map-info-window-content .search-prop .carousel.slide .gallery-item {
     height: 230px;
@@ -62,10 +63,58 @@
 .sebm-google-map-info-window-content .search-prop p {
     margin-bottom: 0px;
 }
-.sebm-google-map-info-window-content .col-sm-6 {
-    width: 100%;
-    padding: 0px;
-}
 .sebm-google-map-info-window-content .carousel-indicators {
     bottom: -12px;
+}
+/* Related properties */
+.property-relatedoptions .search-prop .carousel.slide,
+.property-relatedoptions .search-prop .carousel.slide .gallery-item {
+    height: 200px;
+}
+.property-relatedoptions .property-photo .no-picture {
+    background-size: contain;
+}
+.property-relatedoptions .search-prop-price {
+    background-color: rgba(61, 75, 76, 0.9);
+    color: #DFFBF7;
+    font-size: 18px;
+    padding: 2px 8px;
+    position: absolute;
+    top: 144px;
+    height: 29px;
+}
+.property-relatedoptions .search-prop-price sup {
+    top: -0.2em;
+}
+.property-relatedoptions .search-title {
+    font-size: 15px;
+    margin-bottom: 0px;
+    padding-left: 8px;
+    padding-right: 60px;
+    color: #6E6F71;
+}
+.property-relatedoptions .search-prop p {
+    padding-left: 8px;
+    padding-right: 60px;
+    color: #A6AAAB;
+}
+.property-relatedoptions .search-prop .search-prop-avatar {
+    right: 10px;
+    top: 177px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid #D6F5EF;
+    border-radius: 30px;
+    overflow: hidden;
+    position: absolute;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.property-relatedoptions .col-sm-4 {
+    padding-right: 0px;
+}
+.property-relatedoptions .col-sm-4 ~ .col-sm-4 .carousel {
+    box-shadow: -16px 0px 0px #D6F5EF;
 }

@@ -114,6 +114,60 @@
     font-size: 14px;
     top: -.4em;
 }
+.property-info {
+    background-color: #d6f5ef;
+}
+.property-info h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.property-info .property-info-data {
+    margin-bottom: 20px;
+}
+.property-info .property-info-data .text {
+    border-style: solid;
+    border-width: 1px;
+    padding: 20px;
+    background-color: #CFF0E9;
+    border-color: #C6E5E0;
+}
+.property-info .property-info-title {
+    color: #FD6066;
+}
+.property-info .property-info-attributes {
+    margin-bottom: 20px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #C6E5E0;
+    padding-top: 20px;
+}
+.property-info .property-info-attributes .col-sm-2 {
+    font-weight: bold;
+    color: #7B9894;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.row.property-map {
+    height: 450px;
+    padding: 0;
+    margin: 0px -15px 0px -15px;
+}
+.sebm-google-map-container {
+  height: 450px;
+}
+.property-relatedoptions .section-title {
+    color: #4F5C5F;
+    margin: 30px 0px 13px 0px;
+    font-weight: 900;
+    font-size: 16px;
+}
+.property-relatedoptions .section-properties {
+    margin-bottom: 30px;
+}
+.property-contact.no-picture {
+    top: 0px;
+}
 @media (min-width: 768px) {
     .property-contact {
         position: absolute;

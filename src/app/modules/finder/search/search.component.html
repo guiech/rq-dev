@@ -185,7 +185,9 @@
         </div>
     </form>
     <div class="row properties">
-      <rq-property-item *ngFor="let prop of properties | slice:indexStart:indexStart+itemsPerPage" [data]="prop"></rq-property-item>
+      <div class="col-sm-6" *ngFor="let prop of properties | slice:indexStart:indexStart+itemsPerPage">
+        <rq-property-item [data]="prop"></rq-property-item>
+      </div>
     </div>
     <div class="row pagination-row" *ngIf="showPagination()">
       <div class="col-sm-12">
