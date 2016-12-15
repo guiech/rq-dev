@@ -37,7 +37,7 @@ export class PropertyComponent implements OnInit {
       .subscribe((param:any) => this.propertiesRelated = this.propService.getPropertiesRelated(+param.id));
     
     
-    console.log('v2');
+    console.log('v3');
     
   }
 
