@@ -1,38 +1,38 @@
 <template [ngIf]="images.length === 1">
   <div class="row">
-    <div class="gallery-item col-sm-12" [ngStyle]="{'background-image': 'url(' + images[0] + ')'}" (click)="open(content)">
+    <div class="gallery-item col-sm-12" [ngStyle]="{'background-image': 'url(' + images[0] + ')'}" (click)="open(content, '0')">
     </div>
   </div>
 </template>
 <template [ngIf]="images.length === 2">
   <div class="row">
-    <div class="gallery-item col-sm-6" [ngStyle]="{'background-image': 'url(' + images[0] + ')'}" (click)="open(content)">
+    <div class="gallery-item col-sm-6" [ngStyle]="{'background-image': 'url(' + images[0] + ')'}" (click)="open(content, '0')">
     </div>
-    <div class="gallery-item col-sm-6" [ngStyle]="{'background-image': 'url(' + images[1] + ')'}" (click)="open(content)">
+    <div class="gallery-item col-sm-6" [ngStyle]="{'background-image': 'url(' + images[1] + ')'}" (click)="open(content, '1')">
     </div>
   </div>
 </template>
 <template [ngIf]="images.length === 3">
   <div class="row">
-    <div class="gallery-item col-sm-4" [ngStyle]="{'background-image': 'url(' + images[0] + ')'}" (click)="open(content)">
+    <div class="gallery-item col-sm-4" [ngStyle]="{'background-image': 'url(' + images[0] + ')'}" (click)="open(content, '0')">
     </div>
-    <div class="gallery-item col-sm-4" [ngStyle]="{'background-image': 'url(' + images[1] + ')'}" (click)="open(content)">
+    <div class="gallery-item col-sm-4" [ngStyle]="{'background-image': 'url(' + images[1] + ')'}" (click)="open(content, '1')">
     </div>
-    <div class="gallery-item col-sm-4" [ngStyle]="{'background-image': 'url(' + images[2] + ')'}" (click)="open(content)">
+    <div class="gallery-item col-sm-4" [ngStyle]="{'background-image': 'url(' + images[2] + ')'}" (click)="open(content, '2')">
     </div>
   </div>
 </template>
 <template [ngIf]="images.length === 4">
   <div class="row">
-    <div class="gallery-item col-sm-6" [ngStyle]="{'background-image': 'url(' + images[0] + ')'}" (click)="open(content)">
+    <div class="gallery-item col-sm-6" [ngStyle]="{'background-image': 'url(' + images[0] + ')'}" (click)="open(content, '0')">
     </div>
-    <div class="gallery-item col-sm-6" [ngStyle]="{'background-image': 'url(' + images[1] + ')'}" (click)="open(content)">
+    <div class="gallery-item col-sm-6" [ngStyle]="{'background-image': 'url(' + images[1] + ')'}" (click)="open(content, '1')">
     </div>
   </div>
   <div class="row">
-    <div class="gallery-item col-sm-6" [ngStyle]="{'background-image': 'url(' + images[2] + ')'}" (click)="open(content)">
+    <div class="gallery-item col-sm-6" [ngStyle]="{'background-image': 'url(' + images[2] + ')'}" (click)="open(content, '2')">
     </div>
-    <div class="gallery-item col-sm-6" [ngStyle]="{'background-image': 'url(' + images[3] + ')'}" (click)="open(content)">
+    <div class="gallery-item col-sm-6" [ngStyle]="{'background-image': 'url(' + images[3] + ')'}" (click)="open(content, '3')">
     </div>
   </div>
 </template>
