@@ -9,6 +9,7 @@ import { PropertyItemComponent } from './search/property-item/property-item.comp
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { PropertyComponent } from './property/property.component';
 import { ImageGalleryComponent } from 'app/components/image-gallery/image-gallery.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -22,6 +23,6 @@ import { ImageGalleryComponent } from 'app/components/image-gallery/image-galler
       apiKey: 'AIzaSyABZMkbRqSTpzD2c1DSYRO0i670tP7ODkk'
     })
   ],
-  declarations: [FinderComponent, SearchComponent, HeaderComponent, PropertyItemComponent, PropertyComponent, ImageGalleryComponent]
+  declarations: [FinderComponent, SearchComponent, HeaderComponent, PropertyItemComponent, PropertyComponent, ImageGalleryComponent, FooterComponent]
 })
 export class FinderModule { }

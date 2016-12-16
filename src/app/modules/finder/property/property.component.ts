@@ -36,9 +36,6 @@ export class PropertyComponent implements OnInit {
     this.route.params
       .subscribe((param:any) => this.propertiesRelated = this.propService.getPropertiesRelated(+param.id));
     
-    
-    console.log('v3');
-    
   }
 
 }
