@@ -52,7 +52,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   updateOffsets() {
-    console.log('offsets');
     this.sectionPositions = [];
     if(this.sections != undefined) {
       this.sections.forEach(
