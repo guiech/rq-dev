@@ -12756,3 +12756,6 @@ base-chart.chart {
               font-size: 14px;
               margin: -2px 0px 0px 5px;
               color: #e1e6ef; }
+.dropdown-toggle.no-icon::after {
+    content: none !important;
+}

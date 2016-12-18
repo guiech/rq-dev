@@ -1,6 +1,6 @@
-<div class="rq-manager-body navbar-fixed sidebar-nav fixed-nav  pace-done">
-    <rq-header></rq-header>
-    <rq-aside></rq-aside>
+<div class="rq-manager-body navbar-fixed fixed-nav pace-done" [ngClass]="{'sidebar-nav':sidebarOpen}">
+    <rq-header (onToggleSidebar)="toggleSidebar()"></rq-header>
+    <rq-sidebar></rq-sidebar>
     <main class="main">
         <router-outlet></router-outlet>
     </main>

@@ -4,7 +4,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ManagerComponent } from './manager.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { AsideComponent } from './aside/aside.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ManagerRoutingModule } from './manager-routing.module';
 
@@ -16,6 +16,6 @@ import { ManagerRoutingModule } from './manager-routing.module';
     // thirthy party modules
     NgbModule.forRoot()
   ],
-  declarations: [ManagerComponent, FooterComponent, HeaderComponent, AsideComponent, DashboardComponent]
+  declarations: [ManagerComponent, FooterComponent, HeaderComponent, SidebarComponent, DashboardComponent]
 })
 export class ManagerModule { }

@@ -4,7 +4,7 @@
             <a class="navbar-brand" href="#"></a>
             <ul class="nav navbar-nav hidden-md-down float-xs-left">
                 <li class="nav-item b-r-1">
-                    <a class="nav-link navbar-toggler layout-toggler" href="#">☰</a>
+                    <a class="nav-link navbar-toggler layout-toggler" (click)="toggleSidebar()" href="javascript:;">☰</a>
                 </li>
 
             </ul>
@@ -13,11 +13,11 @@
                 <input class="form-control" type="text" placeholder="Search...">
             </form>
             <ul class="nav navbar-nav float-xs-right hidden-md-down">
-                <li class="nav-item dropdown pr-2">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <li ngbDropdown class="nav-item dropdown pr-2">
+                    <a ngbDropdownToggle class="nav-link" id="flagsDropdown" href="javascript:;">
                         <img src="assets/images/manager-theme/flags/United-Kingdom.png" class="img-flag" alt="English" height="24">
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
                         <div class="dropdown-header text-xs-center">
                             <strong>Choose language</strong>
                         </div>
@@ -29,12 +29,12 @@
                             <img src="assets/images/manager-theme/flags/Spain.png" class="img-flag" alt="Español" height="24">Español</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link nav-pill" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <li ngbDropdown class="nav-item dropdown">
+                    <a ngbDropdownToggle class="nav-link nav-pill no-icon" id="notificationsDropdown" href="javascript:;">
                         <i class="icon-bell"></i>
                         <span class="tag tag-pill tag-danger">5</span>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" aria-labelledby="notificationsDropdown">
 
                         <div class="dropdown-header text-xs-center">
                             <strong>You have 5 notifications</strong>
@@ -87,12 +87,12 @@
 
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link nav-pill" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <li ngbDropdown class="nav-item dropdown">
+                    <a ngbDropdownToggle class="nav-link nav-pill no-icon" id="tasksDropdown" href="javascript:;">
                         <i class="icon-list"></i>
                         <span class="tag tag-pill tag-warning">15</span>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" aria-labelledby="tasksDropdown">
 
                         <div class="dropdown-header text-xs-center">
                             <strong>You have 5 pending tasks</strong>
@@ -144,12 +144,12 @@
                         </a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link nav-pill" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <li ngbDropdown class="nav-item dropdown">
+                    <a ngbDropdownToggle class="nav-link nav-pill no-icon" id="messagesDropdown" href="javascript:;">
                         <i class="icon-envelope-letter"></i>
                         <span class="tag tag-pill tag-info">7</span>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" aria-labelledby="messagesDropdown">
 
                         <div class="dropdown-header text-xs-center">
                             <strong>You have 4 messages</strong>
@@ -229,12 +229,12 @@
                 <li class="nav-item">
                     <a class="nav-link nav-pill" href="#"><i class="icon-location-pin"></i></a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link nav-pill avatar" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <li ngbDropdown class="nav-item dropdown">
+                    <a ngbDropdownToggle class="nav-link nav-pill avatar  no-icon" id="userDropdown" href="javascript:;">
                         <img src="assets/images/manager-theme/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
                         <span class="tag tag-pill tag-danger">9</span>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
 
                         <div class="dropdown-header text-xs-center">
                             <strong>Account</strong>

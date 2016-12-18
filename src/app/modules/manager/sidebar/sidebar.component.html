@@ -12,9 +12,9 @@
                 <li class="nav-title text-xs-center">
                     <span>UI Elements</span>
                 </li>
-                <li class="nav-item nav-dropdown">
-                    <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Components</a>
-                    <ul class="nav-dropdown-items">
+                <li ngbDropdown class="nav-item nav-dropdown">
+                    <a ngbDropdownToggle class="nav-link nav-dropdown-toggle no-icon" id="componentsDropdown" href="javascript:;"><i class="icon-puzzle"></i> Components</a>
+                    <ul class="nav-dropdown-items" aria-labelledby="componentsDropdown">
                         <li class="nav-item">
                             <a class="nav-link" href="components-buttons.html"><i class="icon-puzzle"></i> Buttons</a>
                         </li>

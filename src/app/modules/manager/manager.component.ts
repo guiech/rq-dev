@@ -13,9 +13,15 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class ManagerComponent implements OnInit {
 
+  sidebarOpen:boolean = true;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleSidebar() {
+    this.sidebarOpen = !this.sidebarOpen;
   }
 
 }
