@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ManagerRoutingModule } from './manager-routing.module';
+import { AsideMenuComponent } from './aside-menu/aside-menu.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { ManagerRoutingModule } from './manager-routing.module';
     // thirthy party modules
     NgbModule.forRoot()
   ],
-  declarations: [ManagerComponent, FooterComponent, HeaderComponent, SidebarComponent, DashboardComponent]
+  declarations: [ManagerComponent, FooterComponent, HeaderComponent, SidebarComponent, DashboardComponent, AsideMenuComponent]
 })
 export class ManagerModule { }

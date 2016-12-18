@@ -7,7 +7,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() onToggleSidebar = new EventEmitter<boolean>();
+  @Output() onToggleSidebar = new EventEmitter();
+  @Output() onToggleAsideMenu = new EventEmitter<boolean>();
+  @Output() onToggleMobileSidebar = new EventEmitter<boolean>();
 
   constructor() { }
 
@@ -16,6 +18,14 @@ export class HeaderComponent implements OnInit {
 
   toggleSidebar() {
     this.onToggleSidebar.emit();
+  }
+
+  toggleAsideMenu() {
+    this.onToggleAsideMenu.emit();
+  }
+
+  toggleMobileSidebar() {
+    this.onToggleMobileSidebar.emit();
   }
 
 }
