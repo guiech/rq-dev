@@ -3114,12 +3114,12 @@ header.navbar {
     width: 250px;
     height: 60px;
     padding: 0.5rem 1rem;
-    background-color: #20a8d8;
+    background-color: #008749;
     background-image: url("assets/images/system/renquila-web.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 90px auto;
-    border-bottom: 1px solid #1985ac; }
+    background-size: 170px auto;
+    border-bottom: 1px solid #00a65a; }
 
 header.navbar .navbar-brand {
   margin-right: 0; }
