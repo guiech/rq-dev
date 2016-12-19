@@ -2,8 +2,8 @@ import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { FinderComponent }        from './finder.component';
-import { SearchComponent }        from './search/search.component';
-import { PropertyComponent }      from './property/property.component';
+import { SearchComponent }        from './pages/search/search.component';
+import { PropertyComponent }      from './pages/property/property.component';
 
 const finderRoutes: Routes = [
   { path: '',
