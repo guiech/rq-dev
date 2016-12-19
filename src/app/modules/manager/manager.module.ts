@@ -1,13 +1,17 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ManagerComponent } from './manager.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ManagerRoutingModule } from './manager-routing.module';
-import { AsideMenuComponent } from './aside-menu/aside-menu.component';
+import { NgModule }                   from '@angular/core';
+import { CommonModule }               from '@angular/common';
+import { NgbModule }                  from '@ng-bootstrap/ng-bootstrap';
+
+import { ManagerComponent }           from './manager.component';
+
+import { FooterComponent }            from './footer/footer.component';
+import { HeaderComponent }            from './header/header.component';
+import { SidebarComponent }           from './sidebar/sidebar.component';
+import { AsideMenuComponent }         from './aside-menu/aside-menu.component';
+
+import { DashboardComponent }         from './pages/dashboard/dashboard.component';
+
+import { ManagerRoutingModule }       from './manager-routing.module';
 
 @NgModule({
   imports: [
@@ -17,6 +21,13 @@ import { AsideMenuComponent } from './aside-menu/aside-menu.component';
     // thirthy party modules
     NgbModule.forRoot()
   ],
-  declarations: [ManagerComponent, FooterComponent, HeaderComponent, SidebarComponent, DashboardComponent, AsideMenuComponent]
+  declarations: [
+    ManagerComponent,
+    FooterComponent,
+    HeaderComponent,
+    SidebarComponent,
+    AsideMenuComponent,
+    DashboardComponent,
+  ]
 })
 export class ManagerModule { }
