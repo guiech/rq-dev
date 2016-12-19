@@ -8,8 +8,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Output() onToggleSidebar = new EventEmitter();
-  @Output() onToggleAsideMenu = new EventEmitter<boolean>();
-  @Output() onToggleMobileSidebar = new EventEmitter<boolean>();
+  @Output() onToggleAsideMenu = new EventEmitter();
+  @Output() onToggleMobileSidebar = new EventEmitter();
 
   constructor() { }
 
@@ -17,14 +17,17 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleSidebar() {
+    console.log('sidebar clicked');
     this.onToggleSidebar.emit();
   }
 
   toggleAsideMenu() {
+    console.log('aside clicked');
     this.onToggleAsideMenu.emit();
   }
 
   toggleMobileSidebar() {
+    console.log('mobile clicked');
     this.onToggleMobileSidebar.emit();
   }
 

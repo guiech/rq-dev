@@ -4,11 +4,11 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   selector: 'rq-manager',
   templateUrl: './manager.component.html',
   styleUrls: ['./manager.component.css',
-            './font-awesome.min.css',
-            './glyphicons-filetypes.css',
-            './glyphicons-social.css',
-            './glyphicons.css',
-            './simple-line-icons.css'],
+            '../../../assets/css/manager/font-awesome.min.css',
+            '../../../assets/css/manager/glyphicons-filetypes.css',
+            '../../../assets/css/manager/glyphicons-social.css',
+            '../../../assets/css/manager/glyphicons.css',
+            '../../../assets/css/manager/simple-line-icons.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class ManagerComponent implements OnInit {
@@ -23,7 +23,11 @@ export class ManagerComponent implements OnInit {
   }
 
   getClasses() {
-    return {'mobile-open':this.mobileSidebarOpen,'sidebar-nav':this.sidebarOpen, 'aside-menu-open':this.asideMenuOpen};
+    return {
+      'mobile-open':this.mobileSidebarOpen,
+      'sidebar-nav':this.sidebarOpen,
+      'aside-menu-open':this.asideMenuOpen
+    };
   }
 
   toggleSidebar() {
